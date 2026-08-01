@@ -1001,137 +1001,165 @@
             </p>
         </div>
 
-            </div>
+        <div class="contact-form-wrapper">
 
-          <form
-    class="contact-form"
-    action="https://formspree.io/f/xpqvqqng"
-    method="POST"
-    data-aos="fade-left"
-    novalidate
->
-<input
-    type="hidden"
-    name="_subject"
-    value="New Project Request - True North Digital"
->
+            <form
+                class="contact-form"
+                action="https://formspree.io/f/xpqvqqng"
+                method="POST"
+                data-aos="fade-up"
+                novalidate
+            >
 
-<input
-    type="text"
-    name="_gotcha"
-    class="form-honeypot"
-    tabindex="-1"
-    autocomplete="off"
->
-    <div class="form-group">
-        <label for="clientName">Your Name</label>
+                <input
+                    type="hidden"
+                    name="_subject"
+                    value="New Project Request - True North Digital"
+                >
 
-        <input
-            id="clientName"
-            type="text"
-            name="name"
-            placeholder="Enter your name"
-            required
-        >
+                <input
+                    type="text"
+                    name="_gotcha"
+                    class="form-honeypot"
+                    tabindex="-1"
+                    autocomplete="off"
+                >
 
-        <small class="error-message"></small>
+                <div class="form-group">
+                    <label for="clientName">Your Name</label>
+
+                    <input
+                        id="clientName"
+                        type="text"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                    <small class="error-message"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="clientEmail">Email Address</label>
+
+                    <input
+                        id="clientEmail"
+                        type="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                    <small class="error-message"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="businessName">Business Name</label>
+
+                    <input
+                        id="businessName"
+                        type="text"
+                        name="business_name"
+                        placeholder="Your business name"
+                        required
+                    >
+
+                    <small class="error-message"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="serviceNeeded">Service Needed</label>
+
+                    <select id="serviceNeeded" name="service" required>
+                        <option value="">Select a service</option>
+                        <option value="Website Design">Website Design</option>
+                        <option value="Custom Web Application">
+                            Custom Web Application
+                        </option>
+                        <option value="E-commerce Store">
+                            E-commerce Store
+                        </option>
+                        <option value="Mobile App Development">
+                            Mobile App Development
+                        </option>
+                        <option value="Desktop Software">
+                            Desktop Software
+                        </option>
+                        <option value="Hosting and Maintenance">
+                            Hosting &amp; Maintenance
+                        </option>
+                    </select>
+
+                    <small class="error-message"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="projectBudget">Project Budget</label>
+
+                    <select id="projectBudget" name="budget" required>
+                        <option value="">Select your budget</option>
+                        <option value="Basic Package">
+                            N$1,999 - Basic Package
+                        </option>
+                        <option value="Standard Package">
+                            N$3,499 - Standard Package
+                        </option>
+                        <option value="Premium Package">
+                            N$5,999 - Premium Package
+                        </option>
+                        <option value="Custom Budget">
+                            Custom Budget
+                        </option>
+                    </select>
+
+                    <small class="error-message"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="projectDetails">Project Details</label>
+
+                    <textarea
+                        id="projectDetails"
+                        name="project_details"
+                        rows="5"
+                        placeholder="Tell us about your project..."
+                        required
+                    ></textarea>
+
+                    <small class="error-message"></small>
+                </div>
+
+                <p class="form-message" aria-live="polite"></p>
+
+                <div class="response-time">
+                    <span class="material-symbols-outlined">
+                        schedule
+                    </span>
+
+                    <p>
+                        Average response time:
+                        <strong>Within 48 hours</strong>
+                    </p>
+                </div>
+
+                <p class="contact-direct">
+                    Prefer email?
+                    <a href="mailto:hello@truenorthdigitalnam.com">
+                        hello@truenorthdigitalnam.com
+                    </a>
+                </p>
+
+                <button type="submit" class="primary-btn form-btn">
+                    Send Project Request
+                </button>
+
+            </form>
+
+        </div>
+
     </div>
 
-    <div class="form-group">
-        <label for="clientEmail">Email Address</label>
-
-        <input
-            id="clientEmail"
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-            required
-        >
-
-        <small class="error-message"></small>
-    </div>
-
-    <div class="form-group">
-        <label for="businessName">Business Name</label>
-
-        <input
-            id="businessName"
-            type="text"
-            name="business_name"
-            placeholder="Your business name"
-            required
-        >
-
-        <small class="error-message"></small>
-    </div>
-
-    <div class="form-group">
-        <label for="serviceNeeded">Service Needed</label>
-
-        <select id="serviceNeeded" name="service" required>
-            <option value="">Select a service</option>
-            <option value="Website Design">Website Design</option>
-            <option value="Custom Web Application">Custom Web Application</option>
-            <option value="E-commerce Store">E-commerce Store</option>
-            <option value="Mobile App Development">Mobile App Development</option>
-            <option value="Desktop Software">Desktop Software</option>
-            <option value="Hosting and Maintenance">Hosting &amp; Maintenance</option>
-        </select>
-
-        <small class="error-message"></small>
-    </div>
-
-    <div class="form-group">
-        <label for="projectBudget">Project Budget</label>
-
-        <select id="projectBudget" name="budget" required>
-            <option value="">Select your budget</option>
-            <option value="Basic Package">N$1,999 - Basic Package</option>
-            <option value="Standard Package">N$3,499 - Standard Package</option>
-            <option value="Premium Package">N$5,999 - Premium Package</option>
-            <option value="Custom Budget">Custom Budget</option>
-        </select>
-
-        <small class="error-message"></small>
-    </div>
-
-    <div class="form-group">
-        <label for="projectDetails">Project Details</label>
-
-        <textarea
-            id="projectDetails"
-            name="project_details"
-            rows="5"
-            placeholder="Tell us about your project..."
-            required
-        ></textarea>
-
-        <small class="error-message"></small>
-    </div>
-
-    <p class="form-message" aria-live="polite"></p>
-
-    <div class="response-time">
-        <span class="material-symbols-outlined">schedule</span>
-
-        <p>
-            Average response time:
-            <strong>Within 48 hours</strong>
-        </p>
-    </div>
-<p class="contact-direct">
-    Prefer email?
-    <a href="mailto:hello@truenorthdigitalnam.com">
-        hello@truenorthdigitalnam.com
-    </a>
-</p>
-    <button type="submit" class="primary-btn form-btn">
-        Send Project Request
-    </button>
-
-</form>
 </section>
-
 <!-- MAIN FOOTER -->
 <footer class="main-footer">
 
