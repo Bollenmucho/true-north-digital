@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEO | True North Digital</title>
+  <meta name="description" content="SEO services in Namibia to improve your website’s search visibility, attract the right customers, and grow organic traffic.">
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:"Manrope",system-ui,sans-serif;background:#FAFAF9;color:#1e293b;line-height:1.6}
+    .desktop-nav{position:fixed;top:0;left:0;width:100%;background:rgba(15,23,42,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08);z-index:1000;display:none}
+    @media(min-width:992px){.desktop-nav{display:block}}
+    .desktop-nav-container{max-width:1200px;margin:0 auto;padding:0 20px;height:70px;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo img{height:48px}
+    .nav-links{display:flex;gap:32px;list-style:none;align-items:center}
+    .nav-links a{color:#cbd5e1;text-decoration:none;font-weight:500;font-size:.95rem}
+    .nav-links a:hover{color:#38bdf8}
+    .nav-cta{padding:10px 22px;background:#0ea5e9;color:#fff;border-radius:50px;text-decoration:none;font-weight:600;font-size:.9rem}
+    .has-dropdown{position:relative}
+    .dropdown-toggle{display:flex;align-items:center;gap:4px}
+    .dropdown-toggle .material-symbols-outlined{font-size:18px;transition:transform .3s}
+    .has-dropdown:hover .dropdown-toggle .material-symbols-outlined{transform:rotate(180deg)}
+    .dropdown-menu{position:absolute;top:100%;left:0;background:#fff;min-width:220px;border-radius:12px;box-shadow:0 15px 40px rgba(0,0,0,.12);padding:12px 0;opacity:0;visibility:hidden;transform:translateY(10px);transition:all .25s;list-style:none;z-index:100}
+    .has-dropdown:hover .dropdown-menu{opacity:1;visibility:visible;transform:translateY(8px)}
+    .dropdown-menu li a{display:block;padding:10px 20px;color:#1e293b!important;font-size:.95rem}
+    .dropdown-menu li a:hover{background:#f0f9ff;color:#0ea5e9!important}
+    .mobile-nav{position:fixed;top:0;left:0;width:100%;height:70px;background:rgba(15,23,42,.95);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:space-between;padding:0 20px;z-index:1000}
+    .mobile-logo-img{height:48px}
+    .menu-toggle{width:42px;height:42px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:10px;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+    .menu-toggle span{display:block;width:18px;height:2px;background:#38bdf8;transition:all .3s}
+    .menu-toggle.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .menu-toggle.active span:nth-child(2){opacity:0}
+    .menu-toggle.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    @media(min-width:992px){.mobile-nav{display:none!important}}
+    .side-menu{position:fixed;top:0;left:-320px;width:300px;height:100vh;background:#fff;z-index:1000;padding:90px 40px 40px;transition:left .4s;box-shadow:10px 0 40px rgba(0,0,0,.08);overflow-y:auto}
+    .side-menu.open{left:0}
+    .side-menu a{display:block;color:#1e293b;text-decoration:none;font-size:1.25rem;font-weight:500;margin-bottom:26px}
+    .menu-overlay{position:fixed;inset:0;background:rgba(15,23,42,.3);z-index:999;opacity:0;visibility:hidden;transition:all .3s;backdrop-filter:blur(4px)}
+    .menu-overlay.active{opacity:1;visibility:visible}
+    .mobile-dropdown{margin-bottom:20px}
+    .mobile-dropdown-toggle{width:100%;background:none;border:none;display:flex;align-items:center;justify-content:space-between;color:#1e293b;font-size:1.25rem;font-weight:500;font-family:inherit;cursor:pointer;padding:0}
+    .mobile-dropdown-toggle .material-symbols-outlined{font-size:22px;transition:transform .3s}
+    .mobile-dropdown.open .mobile-dropdown-toggle .material-symbols-outlined{transform:rotate(180deg)}
+    .mobile-dropdown-menu{max-height:0;overflow:hidden;transition:max-height .35s;padding-left:12px}
+    .mobile-dropdown.open .mobile-dropdown-menu{max-height:320px;margin-top:12px}
+    .mobile-dropdown-menu a{display:block;color:#64748b;font-size:1.05rem;margin-bottom:14px;text-decoration:none}
+    .service-hero{position:relative;height:480px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;background:#0f172a;margin-top:70px}
+    .service-hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.45}
+    .service-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(15,23,42,.7),rgba(15,23,42,.85))}
+    .service-hero-content{position:relative;z-index:2;max-width:700px;padding:0 20px;color:#fff}
+    .service-hero-content .eyebrow{color:#38bdf8;font-size:.9rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
+    .service-hero-content h1{font-size:clamp(2.4rem,5vw,3.4rem);font-weight:700;margin-bottom:18px}
+    .service-hero-content p{color:#cbd5e1;font-size:1.2rem;max-width:560px;margin:0 auto}
+    .service-content{max-width:900px;margin:0 auto;padding:80px 20px}
+    .service-block{margin-bottom:60px}
+    .service-block h2{font-size:1.8rem;color:#0f172a;margin-bottom:18px}
+    .service-block p{color:#475569;font-size:1.1rem;line-height:1.75;margin-bottom:16px}
+    .service-block ul{list-style:none;margin-top:20px}
+    .service-block ul li{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;color:#475569;font-size:1.05rem}
+    .service-block ul li .material-symbols-outlined{color:#0ea5e9;font-size:22px;margin-top:2px}
+    .service-cta{background:#0f172a;border-radius:24px;padding:50px 40px;text-align:center;color:#fff;margin-top:40px}
+    .service-cta h2{font-size:1.8rem;margin-bottom:14px}
+    .service-cta p{color:#94a3b8;margin-bottom:28px;max-width:480px;margin-left:auto;margin-right:auto}
+    .service-cta a{display:inline-block;padding:14px 32px;background:#0ea5e9;color:#fff;font-weight:600;border-radius:50px;text-decoration:none}
+    .simple-footer{background:#020617;color:#64748b;padding:35px 20px;text-align:center;font-size:.9rem}
+    .simple-footer a{color:#64748b;text-decoration:none;margin:0 12px}
+    @media(max-width:600px){.service-hero{height:400px}.service-cta{padding:40px 24px}}
+    .mark{
+  font-size:clamp(3.6rem,17vw,15rem);
+  font-weight:800;
+  letter-spacing:-.06em;
+  line-height:.9;
+  background:linear-gradient(180deg,rgba(255,255,255,.16),rgba(255,255,255,0));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  white-space:nowrap;
+  margin-bottom:34px;
+    }
+  </style>
+</head>
+<body>
+  <div class="mobile-nav">
+    <a href="index.html"><img src="assets/truenorth.webp" alt="True North Digital" class="mobile-logo-img"></a>
+    <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
+  </div>
+
+  <nav class="desktop-nav">
+    <div class="desktop-nav-container">
+      <a href="index.html" class="nav-logo"><img src="assets/truenorth.webp" alt="True North Digital"></a>
+      <ul class="nav-links">
+        <li class="has-dropdown">
+          <a href="index.html#services" class="dropdown-toggle">Services <span class="material-symbols-outlined">expand_more</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="web-design.html">Web Design</a></li>
+            <li><a href="development.html">Development</a></li>
+            <li><a href="hosting.html">Hosting & Maintenance</a></li>
+            <li><a href="brand-identity.html">Brand Identity</a></li>
+            <li><a href="uiux.html">UI/UX Design</a></li>
+            <li><a href="seo.html">SEO</a></li>
+          </ul>
+        </li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="index.html#why">Why Us</a></li>
+        <li><a href="index.html#process">Process</a></li>
+        <li><a href="index.html#story">About</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <a href="index.html#contact" class="nav-cta">Start a Project</a>
+    </div>
+  </nav>
+
+  <div class="menu-overlay" id="menuOverlay"></div>
+  <nav class="side-menu" id="sideMenu">
+    <a href="index.html">Home</a>
+    <div class="mobile-dropdown">
+      <button class="mobile-dropdown-toggle">Services <span class="material-symbols-outlined">expand_more</span></button>
+      <div class="mobile-dropdown-menu">
+        <a href="web-design.html">Web Design</a>
+        <a href="development.html">Development</a>
+        <a href="hosting.html">Hosting & Maintenance</a>
+        <a href="brand-identity.html">Brand Identity</a>
+        <a href="uiux.html">UI/UX Design</a>
+        <a href="seo.html">SEO</a>
+      </div>
+    </div>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="index.html#why">Why Us</a>
+    <a href="index.html#process">Process</a>
+    <a href="index.html#story">Our Story</a>
+    <a href="index.html#faq">FAQ</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+
+  <section class="service-hero">
+    <img src="assets/services/seo.webp" alt="SEO" class="service-hero-img">
+    <div class="service-hero-overlay"></div>
+    <div class="service-hero-content" data-aos="fade-up">
+      <p class="eyebrow">Our Services</p>
+      <h1>SEO</h1>
+      <p>Get found on Google and attract more of the right customers online.</p>
+    </div>
+  </section>
+
+  <div class="service-content">
+    <div class="service-block" data-aos="fade-up">
+      <h2>What is SEO?</h2>
+      <p>SEO (Search Engine Optimisation) is the process of improving your website so it ranks higher on search engines like Google. The goal is to increase the quantity and quality of traffic your site receives through organic search results.</p>
+      <p>When done well, SEO helps potential customers find your business when they are actively searching for what you offer.</p>
+    </div>
+    <div class="service-block" data-aos="fade-up">
+      <h2>What We Deliver</h2>
+      <ul>
+        <li><span class="material-symbols-outlined">check_circle</span> On-page SEO optimisation</li>
+        <li><span class="material-symbols-outlined">check_circle</span> Keyword research and targeting</li>
+        <li><span class="material-symbols-outlined">check_circle</span> Technical SEO improvements</li>
+        <li><span class="material-symbols-outlined">check_circle</span> Meta titles, descriptions, and heading structure</li>
+        <li><span class="material-symbols-outlined">check_circle</span> Content optimisation for search intent</li>
+        <li><span class="material-symbols-outlined">check_circle</span> Performance and mobile-friendliness checks</li>
+      </ul>
+    </div>
+    <div class="service-block" data-aos="fade-up">
+      <h2>Who This Service Is For</h2>
+      <ul>
+        <li><span class="material-symbols-outlined">check_circle</span> Businesses that want to attract more local or online customers</li>
+        <li><span class="material-symbols-outlined">check_circle</span> Websites that currently rank poorly on Google</li>
+        <li><span class="material-symbols-outlined">check_circle</span> Companies launching a new website and wanting a strong foundation</li>
+      </ul>
+    </div>
+    <div class="service-cta" data-aos="fade-up">
+      <h2>Ready to improve your search visibility?</h2>
+      <p>Let’s optimise your website so more of the right customers can find you.</p>
+      <a href="index.html#contact">Start a Project</a>
+    </div>
+  </div>
+
+  <footer class="simple-footer">
+    <div class="wrap">
+          <div class="mark" aria-hidden="true">True North</div>
+    <p>© 2026 True North Digital · All rights reserved.</p>
+    <div style="margin-top:12px">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({duration:800,once:true});
+    const menuToggle=document.getElementById("menuToggle"),sideMenu=document.getElementById("sideMenu"),menuOverlay=document.getElementById("menuOverlay");
+    if(menuToggle&&sideMenu&&menuOverlay){
+      menuToggle.addEventListener("click",()=>{menuToggle.classList.toggle("active");sideMenu.classList.toggle("open");menuOverlay.classList.toggle("active")});
+      menuOverlay.addEventListener("click",closeMenu);
+      function closeMenu(){menuToggle.classList.remove("active");sideMenu.classList.remove("open");menuOverlay.classList.remove("active")}
+      document.querySelectorAll('.side-menu a').forEach(link=>link.addEventListener('click',closeMenu));
+    }
+    const mobileDropdown=document.querySelector('.mobile-dropdown'),mobileDropdownToggle=document.querySelector('.mobile-dropdown-toggle');
+    if(mobileDropdownToggle){mobileDropdownToggle.addEventListener('click',()=>mobileDropdown.classList.toggle('open'))}
+  </script>
+</body>
+</html>
